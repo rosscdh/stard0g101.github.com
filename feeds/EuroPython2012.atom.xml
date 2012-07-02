@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/EuroPython2012.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-02T16:00:00+02:00</updated><entry><title>EuroPython2012 - Coffee Break</title><link href="http://stard0g101.github.com/EP-2012-coffeee.html" rel="alternate"></link><updated>2012-07-02T16:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-02:EP-2012-coffeee.html</id><summary type="html">&lt;h1&gt;Coffee time&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/EuroPython2012.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-02T16:00:00+02:00</updated><entry><title>EuroPython2012 - Interview with a BDFL</title><link href="http://stard0g101.github.com/EP-2012-bdfl-qa.html" rel="alternate"></link><updated>2012-07-02T16:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-02:EP-2012-bdfl-qa.html</id><summary type="html">&lt;h1&gt;Interview with a BDFL&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt; yield &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;missed it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt; assert &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;assert is a std python statment but largly unused; as it changes the behaviour in unpredicatble ways&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;False: assert is used by Guido and others very often and does not indeed change behaviour. Test your code with -o; but even if -o did not exist Guido would still claim that assert is valuable even if underused. if assert tests false it means that the post assert code is not evaluated. If that was replaced by fucntion then both arguments are evaluated even if you dont call the function; python 3 should hav ehad a better implementation; Guido regrets that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;</summary><category term="bdfl"></category><category term="keynote"></category><category term="europython2012"></category><category term="@europython"></category><category term="conference"></category></entry><entry><title>EuroPython2012 - Coffee Break</title><link href="http://stard0g101.github.com/EP-2012-coffeee.html" rel="alternate"></link><updated>2012-07-02T16:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-02:EP-2012-coffeee.html</id><summary type="html">&lt;h1&gt;Coffee time&lt;/h1&gt;
 &lt;p&gt;Met an interesting Danish bloke (Steve?) and had a good chat about big data, startups and various other bits and pieces.&lt;/p&gt;
 &lt;p&gt;Then at coffee time met a wonderful group of Irish people; and had a non-stop conversation with Vicky, Julie, Michael and Margin? and adcloudMartin struck up a conversation with Julie which ended in an intersting talk about Hirigana Katakana Kanjii and the various complexities of learning the Japanese language!&lt;/p&gt;
 &lt;p&gt;Julie' Hackerspace: &lt;tog.ie&gt; and &lt;a href="http://www.jpichon.net"&gt;http://www.jpichon.net&lt;/a&gt;
