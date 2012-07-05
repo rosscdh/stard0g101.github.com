@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-04T12:30:00+02:00</updated><entry><title>Useful Things</title><link href="http://stard0g101.github.com/euro-python-learnings.html" rel="alternate"></link><updated>2012-07-04T12:30:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-04:euro-python-learnings.html</id><summary type="html">&lt;h1&gt;Useful things&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-05T09:00:00+02:00</updated><entry><title>Concurrency is here</title><link href="http://stard0g101.github.com/python-concurrent-futures.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:python-concurrent-futures.html</id><summary type="html">&lt;h1&gt;Concurrency in python with concurrent.futures module&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;need to reasearch this more for concurrent processing for large data; uses functional like programming and callbacks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Useful Modules&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;concurrent.futures module&lt;/li&gt;
+&lt;li&gt;Threadpool vs Processpool; Processpool was faster&lt;/li&gt;
+&lt;li&gt;gzip module blocks allot&lt;/li&gt;
+&lt;li&gt;functools module&lt;/li&gt;
+&lt;li&gt;picloud for queue processing&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="concurrency"></category></entry><entry><title>Useful Things</title><link href="http://stard0g101.github.com/euro-python-learnings.html" rel="alternate"></link><updated>2012-07-04T12:30:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-04:euro-python-learnings.html</id><summary type="html">&lt;h1&gt;Useful things&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb"&gt;https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://saltstack.org"&gt;http://saltstack.org&lt;/a&gt;&lt;/li&gt;
