@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-05T09:00:00+02:00</updated><entry><title>Arduino with python</title><link href="http://stard0g101.github.com/euro-python-auduino-python.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:euro-python-auduino-python.html</id><summary type="html">&lt;h1&gt;Arduino &amp;amp; Python&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-05T14:00:00+02:00</updated><entry><title>Python and Pandas - Fase Data mining</title><link href="http://stard0g101.github.com/euro-python-fast-data-mining-with-pandas.html" rel="alternate"></link><updated>2012-07-05T14:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:euro-python-fast-data-mining-with-pandas.html</id><summary type="html">&lt;h1&gt;Pandas and Python&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandas for big data analysis&lt;/li&gt;
+&lt;li&gt;extact knowledge from existing dataset and transform into human readable format&lt;/li&gt;
+&lt;li&gt;Data managment is a huge industry 100 BLN on just data center infrastructure and 24 BLN on database tech&lt;/li&gt;
+&lt;li&gt;biggest problem is actually not the infrastructure but the physical space for the server racks&lt;/li&gt;
+&lt;li&gt;thus fast data mining is 100% important&lt;/li&gt;
+&lt;li&gt;fast data minig = rapid developmet + quick execution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pandas.Series class, is obviously used often - Series([1,2,3,4,5], index=['a','b','c','d'','e']) many many methods available&lt;/li&gt;
+&lt;li&gt;pytables FTW, not a db replacement but excellent for tmp computations for speed!&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Useful&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.visixion.com/?attachment_id=714"&gt;http://www.visixion.com/?attachment_id=714&lt;/a&gt; the presentation&lt;/li&gt;
+&lt;li&gt;derivitaves and analytics with python (not really python lots of theory but inteersting non the less)&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="arduino"></category><category term="pyfirmata"></category></entry><entry><title>Arduino with python</title><link href="http://stard0g101.github.com/euro-python-auduino-python.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:euro-python-auduino-python.html</id><summary type="html">&lt;h1&gt;Arduino &amp;amp; Python&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Arduino is named after an italian king&lt;/li&gt;
 &lt;li&gt;Intro to arduino and its capabilities&lt;/li&gt;
@@ -76,6 +95,8 @@
 &lt;li&gt;&lt;a href="https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb"&gt;https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://saltstack.org"&gt;http://saltstack.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.slideshare.net/lukaszlanga/i-regret-nothing"&gt;http://www.slideshare.net/lukaszlanga/i-regret-nothing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/user/PythonItalia/feed"&gt;http://www.youtube.com/user/PythonItalia/feed&lt;/a&gt; Videos of europython&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.visixion.com/?attachment_id=714"&gt;http://www.visixion.com/?attachment_id=714&lt;/a&gt; Pandas + Python presentation&lt;/li&gt;
 &lt;li&gt;11:15: how did you do that or how a python developer snuck python into an organiation&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="python"></category><category term="useful"></category><category term="notes"></category><category term="sundy"></category></entry><entry><title>Python for AI</title><link href="http://stard0g101.github.com/python-ai.html" rel="alternate"></link><updated>2012-07-04T11:15:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-04:python-ai.html</id><summary type="html">&lt;h1&gt;Bugger&lt;/h1&gt;
 &lt;ul&gt;
