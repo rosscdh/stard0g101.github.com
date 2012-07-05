@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-05T09:00:00+02:00</updated><entry><title>Concurrency is here</title><link href="http://stard0g101.github.com/python-concurrent-futures.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:python-concurrent-futures.html</id><summary type="html">&lt;h1&gt;Concurrency in python with concurrent.futures module&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Django flavoured</title><link href="http://stard0g101.github.com/" rel="alternate"></link><link href="http://stard0g101.github.com/feeds/all.atom.xml" rel="self"></link><id>http://stard0g101.github.com/</id><updated>2012-07-05T09:00:00+02:00</updated><entry><title>Arduino with python</title><link href="http://stard0g101.github.com/euro-python-auduino-python.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:euro-python-auduino-python.html</id><summary type="html">&lt;h1&gt;Arduino &amp;amp; Python&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Arduino is named after an italian king&lt;/li&gt;
+&lt;li&gt;Intro to arduino and its capabilities&lt;/li&gt;
+&lt;li&gt;is a basic system with 2k RAM not enough for an os, so dont go overboard&lt;/li&gt;
+&lt;li&gt;very extensible with a number of addons "shields" that can do everythign form GSM to bluetooth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Python and Arduino&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pyfirmata&lt;/li&gt;
+&lt;li&gt;allows you to code in python and connect to the board directly from the pc&lt;/li&gt;
+&lt;li&gt;?is there a module to convert the python into a scheme (arduino lang)&lt;/li&gt;
+&lt;li&gt;the scheme lang is "slow" but how slow is slow to a microcontroller guy? probably within acceptable limits&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remember arduino is a prototyping device and not really for production usage&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://arduino.cc/playground/Interfacing/Python"&gt;http://arduino.cc/playground/Interfacing/Python&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bitbucket.org/tino/pyfirmata/src"&gt;https://bitbucket.org/tino/pyfirmata/src&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="arduino"></category><category term="pyfirmata"></category></entry><entry><title>Concurrency is here</title><link href="http://stard0g101.github.com/python-concurrent-futures.html" rel="alternate"></link><updated>2012-07-05T09:00:00+02:00</updated><author><name>Ross Crawford-d'Heureuse</name></author><id>tag:stard0g101.github.com,2012-07-05:python-concurrent-futures.html</id><summary type="html">&lt;h1&gt;Concurrency in python with concurrent.futures module&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;need to reasearch this more for concurrent processing for large data; uses functional like programming and callbacks&lt;/li&gt;
 &lt;/ul&gt;
