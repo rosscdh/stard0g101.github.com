@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Useful Things</title>
+        <title>Disquss realtime</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
    
@@ -45,15 +45,15 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="euro-python-learnings.html" rel="bookmark"
-           title="Permalink to Useful Things">Useful Things</a></h1>
+        <a href="euro-python-discuss-real-time.html" rel="bookmark"
+           title="Permalink to Disquss realtime">Disquss realtime</a></h1>
       
     </header>
 
     <div class="entry-content">
       <footer class="post-info">
-        <abbr class="published" title="2012-07-04T12:30:00">
-                Wed 04 July 2012
+        <abbr class="published" title="2012-07-05T14:00:00">
+                Thu 05 July 2012
         </abbr>
 
         
@@ -62,21 +62,46 @@
         </address>
         
 <p>In <a href="./category/2012europython.html">2012europython</a>. </p>
-<p>tags: <a href="./tag/python.html">python</a><a href="./tag/useful.html">useful</a><a href="./tag/notes.html">notes</a><a href="./tag/sundy.html">sundy</a></p>
+<p>tags: <a href="./tag/python.html">python</a><a href="./tag/disquss.html">disquss</a><a href="./tag/realtime.html">realtime</a></p>
 
 
 </footer><!-- /.post-info -->
-      <h1>Useful things</h1>
+      <h1>Disquss in Real time</h1>
 <ul>
-<li><a href="https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb">https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb</a></li>
-<li><a href="http://saltstack.org">http://saltstack.org</a></li>
-<li><a href="http://www.slideshare.net/lukaszlanga/i-regret-nothing">http://www.slideshare.net/lukaszlanga/i-regret-nothing</a></li>
-<li><a href="http://www.youtube.com/user/PythonItalia/feed">http://www.youtube.com/user/PythonItalia/feed</a> Videos of europython</li>
-<li><a href="http://www.visixion.com/?attachment_id=714">http://www.visixion.com/?attachment_id=714</a> Pandas + Python presentation</li>
-<li>gargoyle : feature switching</li>
-<li>11:15: how did you do that or how a python developer snuck python into an organiation</li>
-<li>try "scales" video/presentation "metrics metrics everywhere"</li>
+<li>redis</li>
+<li>gevent : spawn as many threads as you like (bitly geventspawn)</li>
+<li>exponential teim sensitive backoff.. start fail start fail start fail.. kill it</li>
+<li>has priority threading</li>
+<li>yeild thread is yeild 0</li>
+</ul>
+<h3>front end has to be fast</h3>
+<ul>
+<li>pool redis connections</li>
+<li>cant maintain inifnite connections to redis</li>
+<li>no dependency in the system</li>
+<li>request cycle: request -&gt; flask -&gt; get channel -&gt; subscription pool -&gt; returns queue to the request -&gt; </li>
+<li>uwsgi servers can use generators to stream data (of course great idea)</li>
+<li><strong> long polling </strong>: hold connection stream json, use new line as the delimiter jsut keeps the thing open</li>
+<li>not websockets because.. wel they dont work yet (not fully supported)</li>
+<li>websockets will be the option with fallback to long polling .. soon in 2.0</li>
+<li>header MUST be application/json else the browser will cache the response</li>
+<li>pubsub is not threadsafe (halfduplex)</li>
+</ul>
+<h3>test measure repeat</h3>
+<ul>
+<li>darktime use existing network to loadtest (user complaints), </li>
+<li>gargoyle turns features on and off</li>
+</ul>
+<h3>stats</h3>
+<ul>
+<li>measure all the things!</li>
+<li>graphite</li>
+<li>good when numbers dont add up (differential script reuslts)</li>
+<li>testing in dist systems in <strong>hard</strong></li>
+<li>express as +1 and -1</li>
+<li>try "scales" "metrics metrics everywhere"</li>
 <li>thunk? ent to end ack <a href="http://zesty.ca/python/thunk.html">http://zesty.ca/python/thunk.html</a></li>
+<li>nginx - proxy_buffering off; is a MUST!</li>
 </ul>
     </div><!-- /.entry-content -->
     
@@ -84,7 +109,7 @@
       <h2>Comments !</h2>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
-        var disqus_identifier = "euro-python-learnings.html";
+        var disqus_identifier = "euro-python-discuss-real-time.html";
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://djangoflavoured.disqus.com/embed.js';
