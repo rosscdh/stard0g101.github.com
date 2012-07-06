@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Django flavoured - useful</title>
+        <title>Django flavoured - big data</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href=".././theme/css/main.css" type="text/css" />
    
@@ -48,10 +48,10 @@
         
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href=".././euro-python-learnings.html">Useful Things</a></h1> 
+                    <h1 class="entry-title"><a href=".././euro-python-cubes.html">Python Cubes</a></h1> 
                     <footer class="post-info">
-        <abbr class="published" title="2012-07-04T12:30:00">
-                Wed 04 July 2012
+        <abbr class="published" title="2012-07-06T09:00:00">
+                Fri 06 July 2012
         </abbr>
 
         
@@ -60,23 +60,47 @@
         </address>
         
 <p>In <a href=".././category/2012europython.html">2012europython</a>. </p>
-<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/useful.html">useful</a><a href=".././tag/notes.html">notes</a><a href=".././tag/sundy.html">sundy</a></p>
+<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/cubes.html">cubes</a><a href=".././tag/big-data.html">big data</a></p>
 
 
-</footer><!-- /.post-info --><h1>Useful things</h1>
+</footer><!-- /.post-info --><h1>Cubes</h1>
 <ul>
-<li><a href="https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb">https://speakerdeck.com/u/nicola/p/developing-restful-web-apis-with-python-flask-and-mongodb</a></li>
-<li><a href="http://saltstack.org">http://saltstack.org</a></li>
-<li><a href="http://www.slideshare.net/lukaszlanga/i-regret-nothing">http://www.slideshare.net/lukaszlanga/i-regret-nothing</a></li>
-<li><a href="http://www.youtube.com/user/PythonItalia/feed">http://www.youtube.com/user/PythonItalia/feed</a> Videos of europython</li>
-<li><a href="http://www.visixion.com/?attachment_id=714">http://www.visixion.com/?attachment_id=714</a> Pandas + Python presentation</li>
-<li>gargoyle : feature switching</li>
-<li>11:15: how did you do that or how a python developer snuck python into an organiation</li>
-<li>try "scales" video/presentation "metrics metrics everywhere"</li>
-<li>thunk? ent to end ack <a href="http://zesty.ca/python/thunk.html">http://zesty.ca/python/thunk.html</a></li>
-<li>nydis consistent hashin opensource github</li>
-<li><a href="http://packages.python.org/cubes/">http://packages.python.org/cubes/</a></li>
-</ul><p>There are <a href=".././euro-python-learnings.html#disqus_thread">comments</a>.</p>
+<li>json data objects that allow you to describe data facets</li>
+<li>comes with simple tools and an admin interface</li>
+<li>batteries included: sql interfaces; used to have mongo but that was dropped; customisazble interfaces are possible</li>
+<li>the browser does teh logical to data mapping</li>
+</ul>
+<h3>The Cell</h3>
+<p><strong> The core aspect </strong></p>
+<ul>
+<li>a cell is a fomr of filter of the data: from teh users perspective</li>
+<li>multi-dimensional breadcrumbs form teh users persepctive</li>
+<li>cells are composed of paths; depending on the hirearchy of the dimensions</li>
+<li>dimensions can be drilled-down into and very simple via the browser GUI</li>
+<li>can specify dimensions to drill down into</li>
+<li><em>seems to be using pandas</em> ?</li>
+<li>can get browser.facts(cell) browser.vales(cell dimension) browser.cell_details(cell)</li>
+<li>can specify page size and page number</li>
+</ul>
+<h3>DB features</h3>
+<ul>
+<li>only requires read access as it takes that db and stores it locally</li>
+</ul>
+<h3>Slicer</h3>
+<ul>
+<li>model validation</li>
+<li>model translation</li>
+<li>workspace testing</li>
+<li>denormalization</li>
+</ul>
+<h3>The Future</h3>
+<ul>
+<li>pandas is coming as a feature for derived measures</li>
+<li>open data; shared repo of models</li>
+<li>shared repo of dimensions</li>
+<li>public cubes</li>
+</ul>
+<p>Looks to be a very interesting little tool; but i think pandas is somewhat easier at conceptual level (but does not have the pretty interface)... <a href="http://packages.python.org/cubes/">http://packages.python.org/cubes/</a> <a href="https://github.com/Stiivi/cubes">https://github.com/Stiivi/cubes</a></p><p>There are <a href=".././euro-python-cubes.html#disqus_thread">comments</a>.</p>
                 </article>
                 
                     

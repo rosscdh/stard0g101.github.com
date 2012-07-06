@@ -48,8 +48,84 @@
         
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href=".././euro-python-discuss-real-time.html">Disquss realtime</a></h1> 
+                    <h1 class="entry-title"><a href=".././euro-python-cubes.html">Python Cubes</a></h1> 
                     <footer class="post-info">
+        <abbr class="published" title="2012-07-06T09:00:00">
+                Fri 06 July 2012
+        </abbr>
+
+        
+        <address class="vcard author">
+                By <a class="url fn" href=".././author/ross-crawford-dheureuse.html">Ross Crawford-d'Heureuse</a>
+        </address>
+        
+<p>In <a href=".././category/2012europython.html">2012europython</a>. </p>
+<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/cubes.html">cubes</a><a href=".././tag/big-data.html">big data</a></p>
+
+
+</footer><!-- /.post-info --><h1>Cubes</h1>
+<ul>
+<li>json data objects that allow you to describe data facets</li>
+<li>comes with simple tools and an admin interface</li>
+<li>batteries included: sql interfaces; used to have mongo but that was dropped; customisazble interfaces are possible</li>
+<li>the browser does teh logical to data mapping</li>
+</ul>
+<h3>The Cell</h3>
+<p><strong> The core aspect </strong></p>
+<ul>
+<li>a cell is a fomr of filter of the data: from teh users perspective</li>
+<li>multi-dimensional breadcrumbs form teh users persepctive</li>
+<li>cells are composed of paths; depending on the hirearchy of the dimensions</li>
+<li>dimensions can be drilled-down into and very simple via the browser GUI</li>
+<li>can specify dimensions to drill down into</li>
+<li><em>seems to be using pandas</em> ?</li>
+<li>can get browser.facts(cell) browser.vales(cell dimension) browser.cell_details(cell)</li>
+<li>can specify page size and page number</li>
+</ul>
+<h3>DB features</h3>
+<ul>
+<li>only requires read access as it takes that db and stores it locally</li>
+</ul>
+<h3>Slicer</h3>
+<ul>
+<li>model validation</li>
+<li>model translation</li>
+<li>workspace testing</li>
+<li>denormalization</li>
+</ul>
+<h3>The Future</h3>
+<ul>
+<li>pandas is coming as a feature for derived measures</li>
+<li>open data; shared repo of models</li>
+<li>shared repo of dimensions</li>
+<li>public cubes</li>
+</ul>
+<p>Looks to be a very interesting little tool; but i think pandas is somewhat easier at conceptual level (but does not have the pretty interface)... <a href="http://packages.python.org/cubes/">http://packages.python.org/cubes/</a> <a href="https://github.com/Stiivi/cubes">https://github.com/Stiivi/cubes</a></p><p>There are <a href=".././euro-python-cubes.html#disqus_thread">comments</a>.</p>
+                </article>
+                
+            </aside><!-- /#featured -->
+            
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+            
+        
+        
+        
+        
+            
+
+        
+         
+            
+            <li><article class="hentry">    
+                <header>
+                        <h1><a href=".././euro-python-discuss-real-time.html" rel="bookmark" title="Permalink to Disquss realtime">Disquss realtime</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
         <abbr class="published" title="2012-07-05T14:00:00">
                 Thu 05 July 2012
         </abbr>
@@ -63,7 +139,8 @@
 <p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/disquss.html">disquss</a><a href=".././tag/realtime.html">realtime</a></p>
 
 
-</footer><!-- /.post-info --><h1>Disquss in Real time</h1>
+</footer><!-- /.post-info -->
+                <h1>Disquss in Real time</h1>
 <ul>
 <li>redis</li>
 <li>gevent : spawn as many threads as you like (bitly geventspawn)</li>
@@ -74,43 +151,11 @@
 <h3>front end has to be fast</h3>
 <ul>
 <li>pool redis connections</li>
-<li>cant maintain inifnite connections to redis</li>
-<li>no dependency in the system</li>
-<li>request cycle: request -&gt; flask -&gt; get channel -&gt; subscription pool -&gt; returns queue to the request -&gt; </li>
-<li>uwsgi servers can use generators to stream data (of course great idea)</li>
-<li><strong> long polling </strong>: hold connection stream json, use new line as the delimiter jsut keeps the thing open</li>
-<li>not websockets because.. wel they dont work yet (not fully supported)</li>
-<li>websockets will be the option with fallback to long polling .. soon in 2.0</li>
-<li>header MUST be application/json else the browser will cache the response</li>
-<li>pubsub is not threadsafe (halfduplex)</li>
-</ul>
-<h3>test measure repeat</h3>
-<ul>
-<li>darktime use existing network to loadtest (user complaints), </li>
-<li>gargoyle turns features on and off</li>
-</ul>
-<h3>stats</h3>
-<ul>
-<li>measure all the things!</li>
-<li>graphite</li>
-<li>good when numbers dont add up (differential script reuslts)</li>
-<li>testing in dist systems in <strong>hard</strong></li>
-<li>express as +1 and -1</li>
-<li>try "scales" "metrics metrics everywhere"</li>
-<li>thunk? ent to end ack <a href="http://zesty.ca/python/thunk.html">http://zesty.ca/python/thunk.html</a></li>
-<li>nginx - proxy_buffering off; is a MUST!</li>
-<li>nydis consistent hashin opensource github</li>
-</ul><p>There are <a href=".././euro-python-discuss-real-time.html#disqus_thread">comments</a>.</p>
-                </article>
-                
-            </aside><!-- /#featured -->
-            
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-            
-        
+<li>cant maintain inifnite connections to redis ...</li></ul>
+                <a class="readmore" href=".././euro-python-discuss-real-time.html">read more</a>
+                <p>There are <a href=".././euro-python-discuss-real-time.html#disqus_thread">comments</a>.</p>
+                </div><!-- /.entry-content -->
+            </article></li>
         
         
         
@@ -235,48 +280,6 @@
 </ul>
                 <a class="readmore" href=".././python-concurrent-futures.html">read more</a>
                 <p>There are <a href=".././python-concurrent-futures.html#disqus_thread">comments</a>.</p>
-                </div><!-- /.entry-content -->
-            </article></li>
-        
-        
-        
-            
-
-        
-         
-            
-            <li><article class="hentry">    
-                <header>
-                        <h1><a href=".././python-web-apps-low-latency.html" rel="bookmark" title="Permalink to Low latency web apps with python">Low latency web apps with python</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2012-07-05T09:00:00">
-                Thu 05 July 2012
-        </abbr>
-
-        
-        <address class="vcard author">
-                By <a class="url fn" href=".././author/ross-crawford-dheureuse.html">Ross Crawford-d'Heureuse</a>
-        </address>
-        
-<p>In <a href=".././category/2012europython.html">2012europython</a>. </p>
-<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/latency.html">latency</a><a href=".././tag/web.html">web</a><a href=".././tag/apps.html">apps</a></p>
-
-
-</footer><!-- /.post-info -->
-                <h1>Low latency webapps with python</h1>
-<ul>
-<li>speaker woks for financial banking systems with high throughput and where speed is <strong>everything</strong></li>
-<li>key is visualisation of all moving parts.. easy to use and digest graphs</li>
-<li>scatter histograms and line are most useful</li>
-</ul>
-<h3>WSGI frameworks</h3>
-<ul>
-<li>all work in more or less the same way ...</li></ul>
-                <a class="readmore" href=".././python-web-apps-low-latency.html">read more</a>
-                <p>There are <a href=".././python-web-apps-low-latency.html#disqus_thread">comments</a>.</p>
                 </div><!-- /.entry-content -->
             </article></li>
         
