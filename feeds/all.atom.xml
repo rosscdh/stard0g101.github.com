@@ -9,6 +9,7 @@
 &lt;h3&gt;The Cell&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt; The core aspect &lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;star formation model or snowflake formation schema&lt;/li&gt;
 &lt;li&gt;a cell is a fomr of filter of the data: from teh users perspective&lt;/li&gt;
 &lt;li&gt;multi-dimensional breadcrumbs form teh users persepctive&lt;/li&gt;
 &lt;li&gt;cells are composed of paths; depending on the hirearchy of the dimensions&lt;/li&gt;
