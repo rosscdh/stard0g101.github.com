@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Disqus realtime</title>
+        <title>Number Crunching with Python</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
    
@@ -45,15 +45,15 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="euro-python-discuss-real-time.html" rel="bookmark"
-           title="Permalink to Disqus realtime">Disqus realtime</a></h1>
+        <a href="euro-python-number-crunching.html" rel="bookmark"
+           title="Permalink to Number Crunching with Python">Number Crunching with Python</a></h1>
       
     </header>
 
     <div class="entry-content">
       <footer class="post-info">
-        <abbr class="published" title="2012-07-05T14:00:00">
-                Thu 05 July 2012
+        <abbr class="published" title="2012-07-06T14:30:00">
+                Fri 06 July 2012
         </abbr>
 
         
@@ -62,55 +62,48 @@
         </address>
         
 <p>In <a href="./category/2012europython.html">2012europython</a>. </p>
-<p>tags: <a href="./tag/python.html">python</a><a href="./tag/disqus.html">Disqus</a><a href="./tag/realtime.html">realtime</a></p>
+<p>tags: <a href="./tag/python.html">python</a><a href="./tag/number.html">number</a><a href="./tag/numpy.html">numpy</a><a href="./tag/pytables.html">pytables</a></p>
 
 
 </footer><!-- /.post-info -->
-      <h1>Disqus in Real time</h1>
+      <h1>Number crunching with Python</h1>
 <ul>
-<li>redis</li>
-<li>gevent : spawn as many threads as you like (bitly geventspawn)</li>
-<li>exponential time sensitive backoff.. start fail start fail start fail.. kill it</li>
-<li>has priority threading</li>
-<li>yield thread is yield 0</li>
+<li>Scientific and Engineering com</li>
+<li>Numpy NDArray</li>
+<li>CAse studies</li>
+<li>Forman S Action Real computing made Real</li>
+<li>CAse studies</li>
 </ul>
-<h3>front end has to be fast</h3>
+<h3>"The Boring Stuff"</h3>
 <ul>
-<li>pool redis connections</li>
-<li>cant maintain infinite connections to redis</li>
-<li>no dependency in the system</li>
-<li>request cycle: request -&gt; flask -&gt; get channel -&gt; subscription pool -&gt; returns queue to the request -&gt; </li>
-<li>uwsgi servers can use generators to stream data (of course great idea)</li>
-<li><strong> long polling </strong>: hold connection stream json, use new line as the delimiter just keeps the thing open</li>
-<li>not websockets because.. well they don't work yet (not fully supported)</li>
-<li>websockets will be the option with fallback to long polling .. soon in 2.0</li>
-<li>header MUST be application/json else the browser will cache the response</li>
-<li>pubsub is not threadsafe (halfduplex)</li>
+<li>fp numbers</li>
+<li>brute force vs clever</li>
+<li>but brute force is not necessarily mindless</li>
+<li>we are not evil but rather chaotic evil</li>
+<li>Alternatives: Matlab, Octave (clone of matlab), R (stats oriented. poor general purpose programming support)</li>
+<li>Fortran/C++ ver low level but complex</li>
+<li>these are all too low level GP or high level DSL</li>
+<li>Python: numpy. scipy excellent numerical comps and lots of packages.. ipython cli</li>
+<li>HDF5 (pytables) difficult to integrate with</li>
+<li>Specific libs for machine learning</li>
+<li>GPOOP</li>
 </ul>
-<h3>test measure repeat</h3>
+<h4>Why is numpy good?</h4>
 <ul>
-<li>darktime use existing network to loadtest (user complaints), </li>
-<li>gargoyle turns features on and off</li>
+<li>highly optimized code, complex computation and handles its own resolution and is very fast</li>
+<li>numpy is always a trade off between space (memory) and time contig ndarrays</li>
+<li>create matrix from ndarray.. 2 matrices M * M will produce a new array</li>
+<li>standard python slicing can be applied and uses the original memory and not new mem</li>
+<li></li>
 </ul>
-<h3>stats</h3>
-<ul>
-<li>measure all the things!</li>
-<li>graphite</li>
-<li>good when numbers dont add up (differential script results)</li>
-<li>testing in dist systems in <strong>hard</strong></li>
-<li>express as +1 and -1</li>
-<li>try "scales" "metrics metrics everywhere"</li>
-<li>thunk? ent to end ack <a href="http://zesty.ca/python/thunk.html">http://zesty.ca/python/thunk.html</a></li>
-<li>nginx - proxy_buffering off; is a MUST!</li>
-<li>nydis consistent hashin opensource github</li>
-</ul>
+<h3>Fun things</h3>
     </div><!-- /.entry-content -->
     
     <div class="comments">
       <h2>Comments !</h2>
       <div id="disqus_thread"></div>
       <script type="text/javascript">
-        var disqus_identifier = "euro-python-discuss-real-time.html";
+        var disqus_identifier = "euro-python-number-crunching.html";
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://djangoflavoured.disqus.com/embed.js';

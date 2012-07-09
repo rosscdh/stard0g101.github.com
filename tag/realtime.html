@@ -48,7 +48,7 @@
         
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href=".././euro-python-discuss-real-time.html">Disquss realtime</a></h1> 
+                    <h1 class="entry-title"><a href=".././euro-python-discuss-real-time.html">Disqus realtime</a></h1> 
                     <footer class="post-info">
         <abbr class="published" title="2012-07-05T14:00:00">
                 Thu 05 July 2012
@@ -60,26 +60,26 @@
         </address>
         
 <p>In <a href=".././category/2012europython.html">2012europython</a>. </p>
-<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/disquss.html">disquss</a><a href=".././tag/realtime.html">realtime</a></p>
+<p>tags: <a href=".././tag/python.html">python</a><a href=".././tag/disqus.html">Disqus</a><a href=".././tag/realtime.html">realtime</a></p>
 
 
-</footer><!-- /.post-info --><h1>Disquss in Real time</h1>
+</footer><!-- /.post-info --><h1>Disqus in Real time</h1>
 <ul>
 <li>redis</li>
 <li>gevent : spawn as many threads as you like (bitly geventspawn)</li>
-<li>exponential teim sensitive backoff.. start fail start fail start fail.. kill it</li>
+<li>exponential time sensitive backoff.. start fail start fail start fail.. kill it</li>
 <li>has priority threading</li>
-<li>yeild thread is yeild 0</li>
+<li>yield thread is yield 0</li>
 </ul>
 <h3>front end has to be fast</h3>
 <ul>
 <li>pool redis connections</li>
-<li>cant maintain inifnite connections to redis</li>
+<li>cant maintain infinite connections to redis</li>
 <li>no dependency in the system</li>
 <li>request cycle: request -&gt; flask -&gt; get channel -&gt; subscription pool -&gt; returns queue to the request -&gt; </li>
 <li>uwsgi servers can use generators to stream data (of course great idea)</li>
-<li><strong> long polling </strong>: hold connection stream json, use new line as the delimiter jsut keeps the thing open</li>
-<li>not websockets because.. wel they dont work yet (not fully supported)</li>
+<li><strong> long polling </strong>: hold connection stream json, use new line as the delimiter just keeps the thing open</li>
+<li>not websockets because.. well they don't work yet (not fully supported)</li>
 <li>websockets will be the option with fallback to long polling .. soon in 2.0</li>
 <li>header MUST be application/json else the browser will cache the response</li>
 <li>pubsub is not threadsafe (halfduplex)</li>
@@ -93,7 +93,7 @@
 <ul>
 <li>measure all the things!</li>
 <li>graphite</li>
-<li>good when numbers dont add up (differential script reuslts)</li>
+<li>good when numbers dont add up (differential script results)</li>
 <li>testing in dist systems in <strong>hard</strong></li>
 <li>express as +1 and -1</li>
 <li>try "scales" "metrics metrics everywhere"</li>

@@ -73,19 +73,19 @@
 <h3>The "very" front-end</h3>
 <ul>
 <li>98% of the problem is apache or nginx</li>
-<li>answer is... "it doesnt matter which you choose"</li>
-<li>as long as you dont do foolish things like expose gunicorn to the web directly</li>
-<li>general rule is that these things generally dont matter except the rule of not using gunicorn facing the public</li>
+<li>answer is... "it doesn't matter which you choose"</li>
+<li>as long as you don't do foolish things like expose gunicorn to the web directly</li>
+<li>general rule is that these things generally don't matter except the rule of not using gunicorn facing the public</li>
 <li>most processing time is from the time the first byte arrives at the clients browser</li>
 <li>page weight is still a VERY important concept</li>
-<li>boilerplates like twitter bootstrap or html5 boilerplate .. dont take the whole concept take only what you need (obviously)</li>
+<li>boilerplates like twitter bootstrap or html5 boilerplate .. don't take the whole concept take only what you need (obviously)</li>
 <li>avoid "site pestering", multiple http requests are death to performance</li>
 <li>reduce round-trip events, every request has a cost</li>
 <li>use a cdn, or at least ensure that your static server returns 304 not modified</li>
-<li>use a front end cache; nginx (really good built in web caching) or varnish. Some use both which is reasonable but dont put varnish in front of nginx unless 100% required and nginx can handle most scenarios</li>
+<li>use a front end cache; nginx (really good built in web caching) or varnish. Some use both which is reasonable but don't put varnish in front of nginx unless 100% required and nginx can handle most scenarios</li>
 <li>no js callbacks on cached pages</li>
 <li>cookies defy page caching, any page that uses cookies will invalidate cache</li>
-<li>in the case of simple content like "Welcome to the site Bob" apply this on the client side; which allows you to cache pages and then aply customisation.</li>
+<li>in the case of simple content like "Welcome to the site Bob" apply this on the client side; which allows you to cache pages and then apply customization.</li>
 </ul>
 <h3>DNS Providers</h3>
 <ul>
@@ -97,17 +97,17 @@
 <li>Template first design; </li>
 <li>2 ways of rendering the view; 1 wrong 1 right</li>
 <li>Fat view layer (controller) and then template only uses 1 or two variables</li>
-<li>Let the template do the data drive. Querysets as callables and evalluated lazily</li>
+<li>Let the template do the data drive. Querysets as callables and evaluated lazily</li>
 <li>Keeps memory footprint lower as it only uses what it needs and loads lazily</li>
 <li>Cache template fragments if you can; always memory based cache never db or filesystem (memcached, redis if you use it elsewhere)</li>
 <li>Cache querysets; no more db ops that you absolutely must</li>
 <li>CS101 data structures; redis is good for simple keyval hash</li>
 <li>Thundering bird.. cache invalidation cycles</li>
-<li>Cache and prerender pages... </li>
+<li>Cache and pre-render pages... </li>
 <li>large files: X-Accel-Redirect header for large files; which stops the request cycle from hitting django and stops at nginx; never use django to serve a file total waste of a thread (especailly if using gunicorn)</li>
 <li>careful with middleware.. each middleware runs for every step of every request</li>
 <li>control transactions using @decorators</li>
-<li>defer everything; no sync tasks tasks in the view ie fetch stuff form other sites or send email.. do that all async. Long running tasks shoudl aslo be queued asynchronously.</li>
+<li>defer everything; no sync tasks tasks in the view ie fetch stuff form other sites or send email.. do that all async. Long running tasks should aslo be queued asynchronously.</li>
 </ul>
 <h3>The Django Model layer</h3>
 <ul>
@@ -116,38 +116,38 @@
 <li>FKs are good, modern DBs are totally fine with them (not myisam)</li>
 <li><strong>1 excellent trick </strong> for model design: Fast data vs Slow data.. how fast does that data change. creation data is like "Creation_date" whcih does not change often; vs "last_udpated" which changes often.. put them in different tables which would then handle row locking on frequently read and written rows</li>
 <li>Fast data in 1 table and slow in another</li>
-<li>Querysets first the entire dataset is fetched the first time its evaluated... ouch.. objects.all()[2] == FAIL all 500000 rows are fetched and then returns the 1 row.. rather: <strong>cant see anser for fat asses everywhere</strong></li>
+<li>Querysets first the entire dataset is fetched the first time its evaluated... ouch.. objects.all()[2] == FAIL all 500000 rows are fetched and then returns the 1 row.. rather: <strong>cant see answer for fat asses everywhere</strong></li>
 </ul>
 <h3>Transactions</h3>
 <ul>
 <li>out of the box transactions are generally not good</li>
-<li>interdependent models with FKs are not handled wellby default transactions</li>
-<li>only put transactiosn around blocks that actually need it</li>
+<li>interdependent models with FKs are not handled wall by default transactions</li>
+<li>only put transactions around blocks that actually need it</li>
 <li>turn off "autocommit" which is a terribly named variabe name; when you set it True it turns OFF the transactions</li>
-<li>Transactions should always be short and to the point; to reduce time dependency.. start late as possible and finish as early as possible ... helsp stop blocking</li>
-<li>dont rely on django to auto clean transactions.. be explicit</li>
-<li><strong> never wait for async event to finish before commiting the transaction.. this is a major FAIL </strong></li>
+<li>Transactions should always be short and to the point; to reduce time dependency.. start late as possible and finish as early as possible ... helps stop blocking</li>
+<li>don't rely on django to auto clean transactions.. be explicit</li>
+<li><strong> never wait for async event to finish before committing the transaction.. this is a major FAIL </strong></li>
 <li>issue updates!!! never walk a queryset issuing individual save methods on each object</li>
 <li>use .raw() for querysets when the SQL gets to bulky/ungainly</li>
 </ul>
 <h3>The Database</h3>
 <ul>
-<li>the db is your friend.. dont fear it</li>
+<li>the db is your friend.. don't fear it</li>
 <li>under load.. try not to do highly analytical queries</li>
-<li>user should never assemble arbitrary queries as its impossible to optimise.. users shoudl only have set queries</li>
-<li>basic optimisation on joins will go a long way.</li>
-<li>dont store session in the DB</li>
-<li>dont store task queue in the DB (especially when polling) looking at you <strong>celery</strong></li>
-<li>if the db is mostly transactional, dont store high volume data on teh same database.. click stream should go to another db as it messes up the caching</li>
+<li>user should never assemble arbitrary queries as its impossible to optimize.. users should only have set queries</li>
+<li>basic optimization on joins will go a long way.</li>
+<li>don't store session in the DB</li>
+<li>don't store task queue in the DB (especially when polling) looking at you <strong>celery</strong></li>
+<li>if the db is mostly transactional, don't store high volume data on the same database.. click stream should go to another db as it messes up the caching</li>
 <li><strong> NEVER </strong> explicitly issue a db lock; there is NEVER EVER a good reason for this. let the db handle itself</li>
-<li>Connection pooling: django has not good connection pooler; more time is lost in the open close cycle than runnign the actual query</li>
+<li>Connection pooling: django has not good connection pooler; more time is lost in the open close cycle than running the actual query</li>
 <li>use transaction mode if using postgres as it has a basic form of connection pooling</li>
 <li>use postrgres 9,x stream replication feature: its very good.</li>
 <li>use the db routers; reads to dbA writes to dbB</li>
 <li>always replication lag (obviously) write takes time to replicate</li>
 <li>pgbouncer by "skype" is very good .. but no fail over no balancer</li>
-<li>pgpoolII sophisiticated; does fail over and routing; but does not work well with django transactions; assumes you will always modify the db and thus does nto cache and defates the softwares point.. dont use it?</li>
-<li>full text search (solr,elestic search) great for most search results.. but solr is kinda slow.. postgres full text search is good.. mysql has it but is .. well not good.</li>
+<li>pgpoolII sophisticated; does fail over and routing; but does not work well with django transactions; assumes you will always modify the db and thus does nto cache and defates the softwares point.. dont use it?</li>
+<li>full text search (solr,elasticsearch) great for most search results.. but solr is kinda slow.. postgres full text search is good.. mysql has it but is .. well not good.</li>
 <li>in mem dbs: memcached is awesome; </li>
 <li>redis is perfect for queue and advanced ops</li>
 <li>set redis timeouts for microseconds!! as all of the in mems have bad timeouts (very long)</li>
@@ -156,7 +156,7 @@
 <ul>
 <li>everyone uses it</li>
 <li>but any every high load site has their own staff for admin.. so cloud is not really the answer</li>
-<li>spin up and spin down in real time.. is NOT an easy to do thing and is highly unpredicatable behaviour</li>
+<li>spin up and spin down in real time.. is NOT an easy to do thing and is highly unpredictable behavior</li>
 <li>answer is to get LOTS AND LOTS of ram as much as possible</li>
 <li>ensure cloud provider does NOT view your machine as "disposable"</li>
 <li>use fabric.. automate ALL deployments.. no human failure especially with complex lots of moving parts sites</li>
@@ -166,20 +166,20 @@
 <ul>
 <li>only a few sites need to shard</li>
 <li>its complicated; not a 1 button solution</li>
-<li>find a good "pattern" dont do random patterns for data storage</li>
+<li>find a good "pattern" don't do random patterns for data storage</li>
 <li>rule no 1 : understand the growth model of your data (fast vs slow data)</li>
 <li>exponential growth: likes exponential to num users</li>
-<li>isolate sharded models in the app so tehy can be dealt with independently</li>
+<li>isolate sharded models in the app so they can be dealt with independently</li>
 <li>data migration between shards is a given and will need to be dealt with</li>
 <li>architect for lag and pushing data across servers</li>
-<li>consolidation strategies for data: single consilidation quey that gets all data from all shards.. or get the shards to push to a shared database that is queried</li>
-<li>inter shard consolidation is bad... dont cross query shards</li>
-<li>shards are slices of the business and should be treate as such.. dsign for this from the start</li>
+<li>consolidation strategies for data: single consolidation query that gets all data from all shards.. or get the shards to push to a shared database that is queried</li>
+<li>inter shard consolidation is bad... don't cross query shards</li>
+<li>shards are slices of the business and should be treat as such.. design for this from the start</li>
 </ul>
 <h3>Summary</h3>
 <ul>
 <li>Django handles 20k plus request per seconds.. no sweat</li>
-<li>remove the basic stumbeling blocks</li>
+<li>remove the basic stumbling blocks</li>
 <li>small request cycles</li>
 <li>cache everything</li>
 <li>small views</li>
@@ -230,8 +230,8 @@
 <li>missed answer :( </li>
 </ul>
 <h2>Q: Assert</h2>
-<p><strong> Q </strong> assert is a std python statment but largly unused; as it changes the behaviour in unpredicatble ways
-<strong> A </strong> False: assert is used by Guido and others very often and does not indeed change behaviour. Test your code with -o ...</p>
+<p><strong> Q </strong> assert is a std python statement but largely unused; as it changes the behavior in unpredictable ways
+<strong> A </strong> False: assert is used by Guido and others very often and does not indeed change behavior. Test your code with -o ...</p>
                 <a class="readmore" href=".././EP-2012-bdfl-qa.html">read more</a>
                 <p>There are <a href=".././EP-2012-bdfl-qa.html#disqus_thread">comments</a>.</p>
                 </div><!-- /.entry-content -->
